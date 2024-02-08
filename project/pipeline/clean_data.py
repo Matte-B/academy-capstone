@@ -1,4 +1,3 @@
-from fetch_data import fetch_data
 from pyspark.sql import DataFrame, SparkSession, Column
 from pyspark.sql import functions as sf
 from pyspark.sql.types import (TimestampType)
@@ -50,9 +49,7 @@ def cast_columns(frame):
 
     return frame
 
-def clean_frame():
-    frame = fetch_data()
-
+def clean_frame(frame):
     for transformation in (
         flatten_frame,
         drop_columns,
