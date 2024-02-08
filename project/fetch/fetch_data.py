@@ -9,7 +9,7 @@ CONFIG = {
     }
 
 S3_PATH = "s3a://dataminded-academy-capstone-resources/raw/open_aq/"
-SOURCE = "source_data"
+SOURCE = "resources/source_data"
 
 def read_data(path: Path):
     config = SparkConf().setAll(CONFIG.items())
@@ -21,8 +21,7 @@ def fetch_data():
     # use relative paths, so that the location of this project on your system
     # won't mean editing paths
     project_path = Path(__file__).parents[1]
-    resources_dir = project_path / "resources"
-    source_data = resources_dir / SOURCE
+    source_data = project_path / SOURCE
 
     if source_data.exists():
         frame = read_data(source_data)
