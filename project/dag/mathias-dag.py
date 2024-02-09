@@ -17,7 +17,7 @@ with DAG(
     start_date=START,
 ) as dag:
     submit_batch_job = BatchOperator(
-    task_id=TASK
+    task_id=TASK,
     job_name=JOB,
     job_queue=QUEUE,
     job_definition=DEF,
