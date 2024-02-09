@@ -7,7 +7,7 @@ JOB = "Mathias-capstone-job"
 QUEUE = "academy-capstone-winter-2024-job-queue"
 DEF = "Mathias-capstone-batch"
 
-START = datetime(year=2024, month=2, day=9, tz="Europe/Belgium")
+START = datetime(year=2024, month=2, day=9, tz="Europe/Brussels")
 
 with DAG(
     dag_id="run_container",
